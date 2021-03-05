@@ -29,7 +29,7 @@ class Personality:
 class Person:
     name = None
     age = None # between 0 - 80
-    productivity = None # between 1 and 2
+    productivity = None # between 0 and 2
     personality = None # randomly determined by calling a Personality object
     skill_level = None # randomly determined by probability
     employed = False # a boolean to determinte if they're eligible for employment
@@ -55,7 +55,7 @@ class Person:
 
         self.age = random.randint(0, 79)
 
-        self.skill_level = random.choice(["low", "medium", "medium", "high"])
+        self.skill_level = random.choice(["low", "low", "medium", "medium", "medium", "high"])
 
         self.food_consumed = 1 + personality.food_modifier # eventually i'm going to make a thing where if they don't have enough food they get unhappy
 
